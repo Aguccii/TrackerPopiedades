@@ -1,0 +1,64 @@
+Sistema de Gestión de Propiedades Inmobiliarias - Documentación y Funcionamiento
+
+
+
+En resumen, el programa proporciona un conjunto completo de operaciones para gestionar registros de propiedades inmobiliarias, desde la creación y modificación de registros hasta la búsqueda, eliminación lógica y física, y listados detallados.
+
+Estructura de Registro para Propiedades Inmobiliarias:
+
+Estructura de Registro: En una estructura llamada Registro se almacena información sobre propiedades, como ID, fecha de ingreso, zona, ciudad o barrio, número de dormitorios, número de baños, superficie total, superficie cubierta, precio, moneda, tipo de propiedad, operación, fecha de salida y un indicador de activo.
+
+
+Funciones para Operar en el Archivo de Propiedades:
+
+crearArchivo(): Esta función es responsable de la creación del archivo binario "Propiedades.dat". Abre el archivo en modo de escritura binaria (wb). Si el archivo ya existe, esta función simplemente lo abre, y si no existe, lo crea. Es el punto de partida para almacenar registros de propiedades en el programa.
+
+agregarPropiedad(): Aquí el programa permite al usuario ingresar detalles de una propiedad. Esto se logra mediante la captura de datos, como el ID, la fecha de ingreso, la zona, el número de dormitorios, el número de baños, la superficie, el precio, la moneda, el tipo de propiedad, la operación y la fecha de salida. Luego, estos detalles se escriben en el archivo "Propiedades.dat" para que el programa pueda gestionar las propiedades almacenadas.
+
+mostrarMenu(): Esta función muestra un menú interactivo en la consola. Presenta las opciones disponibles al usuario, como crear un archivo, listar registros, agregar propiedades, buscar, modificar, realizar bajas lógicas y físicas, listar bajas físicas y salir del programa. Esto proporciona una interfaz de usuario para navegar por las diferentes funciones del programa.
+
+mostrar_activos(): Esta función se encarga de leer los registros almacenados en el archivo "Propiedades.dat" y mostrar solo aquellos registros con el campo "activo" igual a 1. Así, solo se muestran las propiedades que están activas. Los registros marcados como inactivos (con el campo "activo" igual a 0) no se muestran, lo que permite ocultar propiedades que ya no están disponibles.
+
+mostrar_prop(): Permite al usuario buscar propiedades por tipo. La función solicita al usuario ingresar el tipo de propiedad y muestra los registros que coinciden con ese tipo. Antes de realizar la comparación, se asegura de que la búsqueda sea insensible a mayúsculas y minúsculas, para que coincidan registros independientemente de la forma en que se ingresó el tipo de propiedad.
+
+convertirFechaStringANumero(): Esta función es esencial para comparar fechas. Convierte una fecha en formato "DD/MM/AAAA" a un número entero. Por ejemplo, la fecha "28/10/2023" se convierte en el número 20231028, lo que facilita la comparación y búsqueda de registros por rango de fechas.
+
+buscar_rango(): Permite al usuario buscar propiedades dentro de un rango de fechas de ingreso específicas. El usuario proporciona una fecha mínima y una fecha máxima. La función compara estas fechas con las fechas de ingreso de los registros en el archivo y muestra los registros que caen dentro del rango.
+
+listarRegistros(): Coordinadora de las opciones disponibles para listar registros. Permite al usuario elegir entre listar todos los registros, mostrar solo registros activos, buscar registros por tipo o buscar registros por rango de fecha de ingreso. Proporciona una interfaz de usuario para seleccionar estas opciones.
+
+submenuBuscar(): Muestra un submenú de búsqueda que permite al usuario elegir entre buscar por ID o por tipo de propiedad. Esta función se utiliza en conjunto con buscarRegistroPorID y buscarPorTipo para proporcionar opciones de búsqueda más detalladas.
+
+buscarRegistroPorID(): Permite al usuario buscar registros por su ID en el archivo de propiedades. La función busca registros por el ID proporcionado y muestra los detalles de la propiedad si se encuentra. Esto permite una búsqueda precisa de una propiedad específica por su ID único.
+
+buscarPorTipo(): Permite al usuario buscar registros por tipo de propiedad y operación. La función muestra los detalles de las propiedades que coinciden con la búsqueda de tipo y operación. Esto es útil para encontrar propiedades que cumplen con ciertos criterios de tipo y operación.
+
+modificarRegistro(): Permite al usuario modificar registros existentes en el archivo. El usuario proporciona el ID de la propiedad que desea modificar y luego puede actualizar la ciudad/barrio, precio y fecha de salida de esa propiedad. Esto facilita la gestión y actualización de detalles de propiedades existentes.
+
+bajaLogica(): Realiza una baja lógica en un registro, marcándolo como inactivo. La función permite al usuario proporcionar el ID de la propiedad que desea dar de baja. Luego, se confirma la operación y se actualiza el registro marcando el campo "activo" como 0 y estableciendo la fecha de salida.
+
+bajaFisica(): Realiza una baja física en un registro, moviéndolo a un archivo de bajas físicas con la fecha actual. La función crea un archivo de bajas físicas y guarda los registros marcados como inactivos en ese archivo. Luego, se eliminan los registros inactivos del archivo original. Esto permite conservar un registro de propiedades eliminadas físicamente.
+
+listarBajasFisicas(): Lista los registros almacenados en el archivo de bajas físicas, proporcionando una vista de las propiedades que se han eliminado físicamente. Esto permite al usuario consultar propiedades que ya no están disponibles en el archivo principal.
+
+main(): La función principal del programa, que coordina todas las operaciones y proporciona un menú interactivo para el usuario. Permite al usuario seleccionar entre varias opciones para administrar registros de propiedades de manera efectiva.
+
+Uso del Programa:
+Ejecuta el programa y selecciona una opción del menú principal.
+Sigue las instrucciones proporcionadas para realizar tareas específicas, como agregar, buscar, modificar o eliminar propiedades.
+Utiliza las funciones de listado para obtener información detallada de las propiedades almacenadas.
+
+Notas Adicionales:
+La estructura de registro 'Registro' facilita la organización y gestión de datos relacionados con propiedades inmobiliarias.
+La baja lógica permite mantener un historial de las propiedades retiradas del mercado sin eliminar la información por completo.
+La baja física almacena propiedades inactivas en un archivo separado para su futura referencia.
+Esta documentación proporciona una descripción general de la funcionalidad y estructura del programa de gestión de propiedades inmobiliarias. A medida que el programa se expanda o se requiera documentación más detallada, se pueden agregar secciones adicionales según sea necesario.
+
+Control de Errores:
+Para que no se ingresen números en la zona y en la ciudad o barrio, se uso una variable booleana para que sólo se acepten entradas de texto.
+Se utilizó otra variable booleana para asegurarse de que sólo se ingresen entradas numéricas en el ID, el precio de la propiedad, las superficies, la cantidad de baños y la cantidad de dormitorios.
+En situaciones en las que se requiere elegir entre dos o más opciones, como el tipo de moneda, el tipo de operación y la propiedad, se implementó un ciclo while para restringir las opciones de entrada del usuario a selecciones válidas.
+
+
+Los puntos que no se resolvieron fueron el de Listar bajas físicas y el subpunto de modificar solo puede modificar la ciudad y el precio.
+

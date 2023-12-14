@@ -1,0 +1,96 @@
+Manual de Usuario para el Programa de Gestión de Propiedades Inmobiliarias
+
+
+Tabla de Contenidos
+
+Introducción
+Instalación
+Menú Principal
+Agregar una Nueva Propiedad
+Modificar Detalles de la Propiedad
+Baja Lógica de una Propiedad
+Baja Física de Propiedades
+Búsqueda de Propiedades
+Listado de Propiedades
+Explorar Propiedades Eliminadas
+Salir y Guardar Cambios
+
+1. Introducción
+Bienvenido al Programa de Gestión de Propiedades Inmobiliarias. Este software está diseñado para ayudarte a administrar eficientemente los registros de propiedades. Con este manual del usuario, aprenderás a agregar, modificar, buscar, eliminar y listar registros de propiedades. También puedes gestionar eliminaciones lógicas y físicas.
+
+2. Instalación
+Este programa se distribuye como un archivo ejecutable. La instalación generalmente implica descargar el programa y ejecutarlo en tu computadora. Asegúrate de tener los permisos adecuados para escribir en archivos y directorios, ya que este programa administra registros de propiedades en archivos. Sigue las instrucciones en la pantalla para instalar el programa.
+
+3. Menú Principal
+Al iniciar el programa, verás el Menú Principal, donde puedes acceder a diversas funciones:
+
+Agregar una Nueva Propiedad: Selecciona esta opción para agregar un nuevo registro de propiedad al sistema.
+Modificar Detalles de la Propiedad: Elige esta opción para realizar cambios en los detalles de una propiedad existente.
+Baja Lógica de una Propiedad: Marca una propiedad como eliminada lógicamente, desactivándola.
+Baja Física de Propiedades: Elimina físicamente propiedades que han sido eliminadas lógicamente.
+Búsqueda de Propiedades: Accede al submenú para buscar registros de propiedades por ID o tipo.
+Listado de Propiedades: Elige entre varias opciones para listar registros de propiedades, incluida la posibilidad de filtrar por estado activo, ingresar un tipo de propiedad o especificar un rango de fechas.
+Explorar Propiedades Eliminadas: Visualiza y gestiona propiedades que han sido marcadas para eliminación lógica.
+Salir y Guardar Cambios: Sal del programa de manera segura y guarda cualquier cambio realizado.
+
+4. Agregar una Nueva Propiedad
+Para agregar una nueva propiedad:
+
+Selecciona "Agregar una Nueva Propiedad" en el Menú Principal.
+Se te pedirá ingresar los detalles de la propiedad, como ID, fecha, ubicación, número de habitaciones, baños, área total, área cubierta, precio, moneda, tipo de propiedad y operación.
+Sigue las indicaciones en la pantalla e introduce la información solicitada.
+Una vez que todos los detalles estén ingresados, se añadirá el nuevo registro de propiedad al sistema.
+
+5. Modificar Detalles de la Propiedad
+Para modificar los detalles de una propiedad existente:
+
+Selecciona "Modificar Detalles de la Propiedad" en el Menú Principal.
+Se te pedirá ingresar el ID de la propiedad que deseas modificar.
+Si se encuentra la propiedad, se te pedirá confirmar las modificaciones.
+Puedes actualizar la ciudad/barrio, precio y fecha de salida. Asegúrate de revisar y confirmar los cambios.
+Los detalles modificados se guardarán.
+
+6. Baja Lógica de una Propiedad
+Para dar de baja lógica (desactivar) una propiedad:
+
+Selecciona "Baja Lógica de una Propiedad" en el Menú Principal.
+Ingresa el ID de la propiedad que deseas desactivar.
+Se te pedirá confirmar la eliminación.
+La propiedad se marcará como inactiva, pero el registro permanecerá en el sistema.
+
+7. Baja Física de Propiedades
+Para eliminar físicamente propiedades que han sido desactivadas lógicamente:
+
+Selecciona "Baja Física de Propiedades" en el Menú Principal.
+Las propiedades que se marcaron como eliminadas lógicamente se eliminarán permanentemente del sistema.
+El programa guardará las propiedades activas y creará un registro de propiedades eliminadas en un archivo separado.
+
+8. Búsqueda de Propiedades
+Para buscar propiedades:
+
+Selecciona "Búsqueda de Propiedades" en el Menú Principal.
+Puedes optar por buscar por ID o por tipo.
+Sigue las indicaciones para especificar los criterios de búsqueda.
+El programa mostrará los registros de propiedades que coinciden con los criterios.
+
+9. Listado de Propiedades
+Para listar propiedades:
+
+Selecciona "Listado de Propiedades" en el Menú Principal.
+Elige entre opciones para listar todas las propiedades, filtrar por estado activo, ingresar un tipo de propiedad o especificar un rango de fechas.
+El programa mostrará los registros de propiedades según tu selección.
+
+10. Explorar Propiedades Eliminadas
+Para explorar propiedades marcadas para eliminación lógica:
+
+Selecciona "Explorar Propiedades Eliminadas" en el Menú Principal.
+El programa mostrará propiedades que han sido marcadas como eliminadas lógicamente.
+Puedes optar por eliminar permanentemente estos registros.
+
+11. Salir y Guardar Cambios
+Para salir del programa y guardar los cambios realizados:
+
+Selecciona "Salir y Guardar Cambios" en el Menú Principal.
+El programa guardará cualquier modificación y se cerrará de forma segura.
+
+El mensaje "No se pudo abrir el archivo: No such file or directory" se debe a que el archivo no existe.
